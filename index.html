@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <img id="background" src="bg.jpg" alt="Game Background">
+        <div id="player"></div>
+        <div id="player-line"></div>
+        <div id="scoreboard">Score: <span id="score">0</span> | Best: <span id="best-score-display">0</span></div>
+        <div id="live-score">Live Score: <span id="live-score-value">0</span></div>
+        <div id="start-screen">
+            <h1>Shooting Game</h1>
+            <button type="button" onclick="startGame()">Start Game</button>
+        </div>
+        <div id="game-over">
+            <h1>Game Over</h1>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <p>Best Score: <span id="best-score-final">0</span></p>
+            <button type="button" onclick="restartGame()">Replay</button>
+        </div>
+        <!-- About Creator Icon -->
+        <div id="about-icon" onclick="toggleAboutCreator()">ⓘ</div>
+        <!-- About Creator Section -->
+        <div id="about-creator">
+            <h2>About Creator</h2>
+            <p><strong>Name:</strong> Rafi</p>
+            <p><strong>Email:</strong> <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/yourprofile" target="_blank">Şanvi Āl Êvan (R A F I)</a></p>
+            <button type="button" onclick="toggleAboutCreator()">Close</button>
+        </div>
+    </div>
+
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="background-music" loop>
+        <source src="background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="fire-sound">
+        <source src="fire.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="hit-sound">
+        <source src="hit.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="gameover-sound">
+        <source src="gameover.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="hasina1-sound">
+        <source src="hasina1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="hasina2-sound">
+        <source src="hasina2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="hasina3-sound">
+        <source src="hasina3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

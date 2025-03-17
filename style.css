@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+#player {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: url('mainch.png') no-repeat center/contain;
+    display: none;
+}
+
+#player-line {
+    position: absolute;
+    bottom: 95px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    display: none;
+}
+
+.bullet {
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background-color: red;
+    border-radius: 4px;
+}
+
+.bomb {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('bomb.png') no-repeat center/contain;
+}
+.enemy {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('villain.png') no-repeat center/contain;
+}
+/* Enemy styles */
+.enemy.villain {
+    background: url('villain.png') no-repeat center/contain;
+}
+
+.enemy.modi {
+    background: url('modi.png') no-repeat center/contain;
+}
+
+.enemy.qader {
+    background: url('qader.png') no-repeat center/contain;
+}
+
+.enemy.joy {
+    background: url('joy.png') no-repeat center/contain;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    z-index: 10;
+    display: none;
+}
+
+#live-score {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-size: 18px;
+    color: yellow;
+    z-index: 11;
+    display: none;
+}
+
+#start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+}
+
+#start-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#start-screen button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+#start-screen button:hover {
+    background: darkred;
+}
+
+#game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 20;
+}
+
+#game-over h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#game-over p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+#game-over button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+#game-over button:hover {
+    background: darkred;
+}
+
+#about-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 30;
+    transition: background 0.3s ease;
+}
+
+#about-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#about-creator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 30;
+    display: none;
+    width: 250px;
+}
+
+#about-creator h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#about-creator p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+#about-creator a {
+    color: white;
+    text-decoration: none;
+}
+
+#about-creator a:hover {
+    text-decoration: underline;
+}
+
+#about-creator button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+#about-creator button:hover {
+    background: darkred;
+}
