@@ -1,0 +1,21 @@
+{
+  "name": "hasina on fire",
+  "short_name": "ShootingGame",
+  "description": "A fun shooting game where you hit falling enemies!",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff6600",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
